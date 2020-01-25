@@ -1,0 +1,62 @@
+<br><br>
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="Enter the 1st item..."
+    [(ngModel)]="item1">
+</mat-form-field>
+
+<mat-form-field class="example-full-width1">
+    <input matInput placeholder="Enter price..."
+    [(ngModel)]="price1">
+</mat-form-field>
+
+<br>
+<mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter the 2nd item..."
+        [(ngModel)]="item2">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width1">
+        <input matInput placeholder="Enter price..."
+        [(ngModel)]="price2">
+    </mat-form-field>
+<br>
+<br>
+
+<button class="btn btn-primary" style="margin-left: 650px"
+(click)="OnClick(price1.value,price2.value)">Generate Invoice</button>
+<br><br><br>
+<table border="2" width=300 style="margin-left: 600px" *ngIf="flag">
+    <tr>
+        <th>Items</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>{{ item1 }}</td>
+        <td rowspan="2">{{ total }}</td>
+    </tr>
+    <tr>
+        <td>{{ item2 }}</td>
+    </tr>
+</table>
+<br><br>
+<button class="btn btn-primary" style="margin-left: 680px" *ngIf="totalBill"
+(click)="Checkout()">Checkout</button>
+<br><br>
+<table border="2" width=300 style="margin-left: 600px" *ngIf="final">
+    <tr>
+        <th>Items</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>{{ item11 }}</td>
+        <td>{{ price11 }}</td>
+    </tr>
+    <tr>
+        <td>{{ item22 }}</td>
+        <td>{{ price22 }}</td>
+    </tr>
+    <tr>
+        <td>{{ bill }}</td>
+        <td>{{ final }}</td>
+    </tr>
+</table>

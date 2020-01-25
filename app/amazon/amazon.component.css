@@ -1,0 +1,20 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 20%;
+    margin-left: 350px;
+  }
+
+  .example-full-width1 {
+    width: 20%;
+    margin-left: 100px;
+  }
+
+  table {
+      cellspacing:2px;
+      cellpadding:2px;
+  }
